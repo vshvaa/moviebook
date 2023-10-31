@@ -1,0 +1,54 @@
+<div class="login-container">
+<div class="col-md-12 ">
+<div class="card card-container bdrop" >
+    <h2 class="badge text-bg-success" > Register</h2>
+    <form [formGroup]="UserForm" #f="ngForm">
+        
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input id="email" type="text" formControlName="email" class="form-control">
+            <div *ngIf="email.invalid && email.touched" class="alert alert-danger">Email is required.</div>
+            <div *ngIf="email.invalid && email.touched" class="alert alert-danger">Please enter valid email</div>
+        </div>
+        <div class="form-group">
+        <label for="firstName">First Name: </label>
+        <input id="firstName" type="text" formControlName="firstName" class="form-control">
+        <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger">FirstName is required.</div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name: </label>
+        <input id="lastName" type="text" formControlName="lastName" class="form-control">
+        <div *ngIf="lastName.invalid && lastName.touched" class="alert alert-danger">LastName is required.</div>
+    </div>
+        <div class="form-group">
+        <label for="password">Password: </label>
+        <input id="password" type="password" formControlName="password" class="form-control">
+        <div *ngIf="password.invalid && password.touched" class="alert alert-danger">Password is required.</div>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">ConfirmPassword: </label>
+        <input id="confirmPassword" type="password" formControlName="confirmPassword" class="form-control">
+        <div *ngIf="confirmPassword.invalid && confirmPassword.touched" class="alert alert-danger">ConfirmPassword is required.</div>
+    </div>
+   
+    <div class="form-group">
+        <label for="contactNumber">ContactNumber: </label>
+        <input id="contactNumber" type="text" formControlName="contactNumber" class="form-control">
+        <div *ngIf="contactNumber.invalid && contactNumber.touched" class="alert alert-danger">ContactNumber is required.</div>
+    </div>
+    <button class="btn btn-primary me-2" type="submit" [disabled]="!UserForm.valid" (click)="add()">Register</button>
+    <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+<div *ngIf="f.submitted && !status" class="alert alert-danger">{{errorMessage}}</div>
+      </form>
+    </div>
+    <div class="row"  *ngIf="showMsg">
+        <div class="col-xs-12">
+          <p class="alert alert-success">
+              <strong>Registration Success!</strong>
+
+          </p>
+        </div>
+      </div>
+</div>
+</div>

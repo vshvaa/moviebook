@@ -1,0 +1,99 @@
+label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .card-container.card {
+    max-width: 400px !important;
+    padding: 40px 35px;
+  }
+  
+  .card {
+    background-color: #f7f7f7;
+    padding: 20px 25px 20px;
+    margin: 0 auto 20px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  .bdrop {
+    background-color: #bbbbbbc0;
+    backdrop-filter: blur(1px);
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.login-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  width: 300px;
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+
+.login-container .form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-container .form-group input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-container .form-group input:focus {
+  outline: none;
+  border-color: #ff4081;
+}
+
+.login-container .form-group .error-message {
+  color: #ff4081;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.login-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff4081;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-container button[type="submit"]:hover {
+  background-color: #e4006f;
+}
